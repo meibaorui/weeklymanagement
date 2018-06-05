@@ -16,6 +16,14 @@
     <!-- 静态资源文件 -->
     <mvc:default-servlet-handler />
 
+    <mvc:interceptors>
+        <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+        <bean class="com.wanfangdata.weekly.Auth.AuthInterceptor"></bean>
+    </mvc:interceptors>
+
+
+
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean id="mappingJacksonHttpMessageConverter"
