@@ -47,7 +47,7 @@
 
   <!--如果web.xml中没有welcome-file-list节点（tomcat和jetty服务器）会跳转到index.html页面，如果没有index.html会跳转到index.jsp-->
   <welcome-file-list>
-    <welcome-file>index.btl</welcome-file>
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
 
   <!-- springmvc 配置 -->
