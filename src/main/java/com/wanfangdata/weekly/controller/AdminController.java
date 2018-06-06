@@ -1,7 +1,7 @@
 package com.wanfangdata.weekly.controller;
 
-import com.wanfangdata.weekly.Auth.AuthPassport;
-import com.wanfangdata.weekly.Auth.Role;
+import com.wanfangdata.weekly.auth.AuthPassport;
+import com.wanfangdata.weekly.auth.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -13,7 +13,16 @@
         <div class="text-center">
             <h1>周报管理系统-管理员登录</h1>
         </div>
-        <form>
+        <?
+        if(!isEmpty(errorMessage)){
+        ?>
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            ${errorMessage}
+        </div>
+        <?}?>
+        <form method="post" action="/adminLogin">
             <div class="form-group">
                 <label for="admin-id">ADMIN-ID</label>
                 <div>

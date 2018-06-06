@@ -1,4 +1,4 @@
-package com.wanfangdata.weekly.Auth;
+package com.wanfangdata.weekly.auth;
 
 import java.lang.annotation.*;
 

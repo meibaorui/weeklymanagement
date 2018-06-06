@@ -1,6 +1,6 @@
-package com.wanfangdata.weekly.Auth;
+package com.wanfangdata.weekly.auth;
 
-import com.wanfangdata.weekly.Auth.pojo.AuthUser;
+import com.wanfangdata.weekly.auth.pojo.AuthUser;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

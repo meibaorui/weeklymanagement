@@ -1,4 +1,4 @@
-package com.wanfangdata.weekly.Auth;
+package com.wanfangdata.weekly.auth;
 
 /**
  * 用户角色枚举

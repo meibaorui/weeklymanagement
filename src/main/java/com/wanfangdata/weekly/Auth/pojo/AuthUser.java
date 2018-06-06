@@ -1,6 +1,6 @@
-package com.wanfangdata.weekly.Auth.pojo;
+package com.wanfangdata.weekly.auth.pojo;
 
-import com.wanfangdata.weekly.Auth.Role;
+import com.wanfangdata.weekly.auth.Role;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -64,6 +64,14 @@ public class AuthUser {
             return false;
         }
         return true;
+    }
+
+    public static void cleanAuthUserSession(HttpServletRequest request){
+        HttpSession session = request.getSession(false);
+        if (session != null&&session.getAttribute(SESSION_AUTH_USER)!=null) {
+            session.setAttribute(SESSION_AUTH_USER,null);
+            session = null;
+        }
     }
 
     public String getUserId() {
