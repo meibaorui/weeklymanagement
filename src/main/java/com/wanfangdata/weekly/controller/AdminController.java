@@ -22,4 +22,9 @@ public class AdminController {
     public String index(){
         return "admin/index";
     }
+
+    @RequestMapping("/addEmployee")
+    public String addEmployee(){
+        return "admin/editorEmployee";
+    }
 }

@@ -1,0 +1,29 @@
+<?
+layout("/admin/include/layout.html",{title:'员工管理'}){
+?>
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <from class="form-horizontal">
+        <div class="from-group">
+            <label for="user_name" class="control-label">姓名</label>
+            <input type="text" class="form-control" name="userName" id="user_name"/>
+        </div>
+        <div class="from-group">
+            <label for="user_id" class="control-label">公司邮箱</label>
+            <div class="input-group">
+                <input type="text" class="form-control" name="userId" id="user_id"/>
+                <div class="input-group-addon">@wanfangdata.com.cn</div>
+            </div>
+        </div>
+        <div class="from-group">
+            <label for="position" class="control-label">岗位</label>
+            <div class="input-group">
+                <select name="position" id="position" class="form-control">
+                </select>
+                <div class="btn input-group-addon">没有对应的岗位？点此添加</div>
+            </div>
+        </div>
+    </from>
+</div>
+
+<?}?>

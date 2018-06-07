@@ -23,12 +23,12 @@ public class MpGenerator {
 
 	private static void generateByTables(boolean serviceNameStartWithI, String packageName, String... tableNames) {
 		GlobalConfig config = new GlobalConfig();
-		String dbUrl = "*";
+		String dbUrl = "jdbc:mysql://cd-cdb-qj5lr8nq.sql.tencentcdb.com:63932/weekly?useUnicode=true&characterEncoding=utf-8&useSSL=false";
 		DataSourceConfig dataSourceConfig = new DataSourceConfig();
 		dataSourceConfig.setDbType(DbType.MYSQL)
 				.setUrl(dbUrl)
-				.setUsername("*")
-				.setPassword("*")
+				.setUsername("root")
+				.setPassword("mbr821016")
 				.setDriverName("com.mysql.jdbc.Driver");
 		StrategyConfig strategyConfig = new StrategyConfig();
 		strategyConfig
@@ -39,7 +39,7 @@ public class MpGenerator {
 				.setInclude(tableNames);//修改替换成你需要的表名，多个表名传数组
 		config.setActiveRecord(false)
 				.setAuthor("meibaorui")
-				.setOutputDir("d:\\codeGen")
+				.setOutputDir("/Users/meibaorui/mq")
 				.setFileOverride(true);
 		if (!serviceNameStartWithI) {
 			config.setServiceName("%sService");

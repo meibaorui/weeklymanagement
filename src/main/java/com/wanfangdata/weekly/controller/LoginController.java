@@ -1,13 +1,10 @@
 package com.wanfangdata.weekly.controller;
 
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.plugins.Page;
 import com.wanfangdata.weekly.auth.Role;
 import com.wanfangdata.weekly.auth.pojo.AuthUser;
 import com.wanfangdata.weekly.common.util.MD5Util;
 import com.wanfangdata.weekly.entity.Admin;
 import com.wanfangdata.weekly.mapper.AdminMapper;
-import com.wanfangdata.weekly.service.impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.util.List;
 
 @Controller
 public class LoginController {
