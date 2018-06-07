@@ -1,9 +1,8 @@
-<?
-layout("/admin/include/layout.html",{title:'员工管理'}){
-?>
+<?var htmlPart = {?>
 <div class="col-md-3"></div>
 <div class="col-md-6">
     <from class="form-horizontal">
+        <input type="text" name="userId" disabled style="display: none"/>
         <div class="from-group">
             <label for="user_name" class="control-label">姓名</label>
             <input type="text" class="form-control" name="userName" id="user_name"/>
@@ -23,7 +22,30 @@ layout("/admin/include/layout.html",{title:'员工管理'}){
                 <div class="btn input-group-addon">没有对应的岗位？点此添加</div>
             </div>
         </div>
+        <div class="from-group">
+            <label for="manager_select" class="control-label">周报汇报人</label>
+            <select class="form-control" id="manager_select" name="managerId">
+                <option value="">暂无（如果员工库中还没有他要汇报的人，应先添加汇报人）</option>
+            </select>
+        </div>
     </from>
 </div>
+<?};?>
 
-<?}?>
+<?var jsPart = {?>
+<link href="/content/lib/jquery/jquery-editable-select.min.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/content/lib/jquery/jquery-editable-select.min.js"></script>
+<script>
+    $(function () {
+        $('#manager_select').editableSelect({
+            filter: true,
+            effects: "slide"
+        });
+    })
+</script>
+<?};?>
+
+
+<?
+layout("/admin/include/layout.html",{title:'员工管理',jsSection:jsPart,htmlSection:htmlPart}){}
+?>

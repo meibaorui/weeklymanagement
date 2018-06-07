@@ -1,0 +1,44 @@
+<?
+layout("/admin/include/layout.html",{title:'员工管理'}){
+?>
+<div class="col-md-3"></div>
+<div class="col-md-6">
+    <?if(!isEmpty(errorMessage)){?>
+    <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        ${errorMessage}
+    </div>
+    <?}?>
+    <form method="post" action="/admin/addPosition">
+        <input type="text" name="id" disabled style="display: none"/>
+        <div class="from-group">
+            <label for="position_name" class="control-label">岗位序列名称</label>
+            <input type="text" class="form-control" name="positionName" id="position_name"/>
+        </div>
+        <div class="from-group">
+            <label for="position_level" class="control-label">岗位等级</label>
+            <select name="positionLevel" id="position_level" class="form-control">
+                <option value="1a">1a</option>
+                <option value="1b">1b</option>
+                <option value="1c">1c</option>
+                <option value="2a">2a</option>
+                <option value="2b">2b</option>
+                <option value="2c">2c</option>
+                <option value="3a">3a</option>
+                <option value="3b">3b</option>
+                <option value="3c">3c</option>
+                <option value="3d">3d</option>
+                <option value="3e">3e</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div>
+                <button type="submit" class="btn btn-primary col-md-12">提交并继续添加</button>
+            </div>
+        </div>
+    </form>
+</div>
+<?}?>

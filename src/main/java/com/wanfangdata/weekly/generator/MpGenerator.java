@@ -23,12 +23,12 @@ public class MpGenerator {
 
 	private static void generateByTables(boolean serviceNameStartWithI, String packageName, String... tableNames) {
 		GlobalConfig config = new GlobalConfig();
-		String dbUrl = "jdbc:mysql://cd-cdb-qj5lr8nq.sql.tencentcdb.com:63932/weekly?useUnicode=true&characterEncoding=utf-8&useSSL=false";
+		String dbUrl = "*";
 		DataSourceConfig dataSourceConfig = new DataSourceConfig();
 		dataSourceConfig.setDbType(DbType.MYSQL)
 				.setUrl(dbUrl)
-				.setUsername("root")
-				.setPassword("mbr821016")
+				.setUsername("*")
+				.setPassword("*")
 				.setDriverName("com.mysql.jdbc.Driver");
 		StrategyConfig strategyConfig = new StrategyConfig();
 		strategyConfig

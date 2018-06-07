@@ -9,7 +9,13 @@
 <?include("/admin/include/header.html"){}?>
 <div class="container-fluid">
     ${layoutContent}
+    <?if(!isEmpty(htmlSection)){?>
+    ${htmlSection}
+    <?}?>
 </div>
 <?include("/admin/include/footer.html"){}?>
+<?if(!isEmpty(jsSection)){?>
+${jsSection}
+<?}?>
 </body>
 </html>
